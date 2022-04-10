@@ -1,6 +1,6 @@
 package com.company;
 
-public class ValidatorEmail implements Validator {
+public class EmailValidator implements Validator {
 
     private boolean CHECK_NAME = false;
     private boolean CHECK_DOMAIN_NAME = false;

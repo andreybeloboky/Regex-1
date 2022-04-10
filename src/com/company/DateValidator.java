@@ -3,7 +3,7 @@ package com.company;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ValidatorDate implements Validator {
+public class DateValidator implements Validator {
     /**
      * @param str - this string which we are to check for valid;
      * @return true - valid string, false - non-valid string;
