@@ -1,5 +1,5 @@
 package com.company;
 
 public interface Validator {
-    boolean validate(String str);
+    void validate(String str);
 }

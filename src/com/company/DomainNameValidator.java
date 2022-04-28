@@ -9,9 +9,11 @@ public class DomainNameValidator implements Validator {
      * @return true - valid string, false - non-valid string;
      */
     @Override
-    public boolean validate(String str) {
+    public void validate(String str) {
         Pattern domainName = Pattern.compile("http://\\w+\\.(com|ru|by|ua)/");
         Matcher checkDate = domainName.matcher(str);
-        return checkDate.matches();
+        if (!checkDate.matches()) {
+            throw new EmailValidator.IncorrectInputException("Incorrect input");
+        }
     }
 }

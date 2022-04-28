@@ -9,9 +9,11 @@ public class IPValidator implements Validator {
      * @return true - valid string, false - non-valid string;
      */
     @Override
-    public boolean validate(String str) {
+    public void validate(String str) {
         Pattern IP = Pattern.compile("([A-z0-9]{2,4}\\.){3}[A-z0-9]{2,4}");
         Matcher checkIP = IP.matcher(str);
-        return checkIP.matches();
+        if (!checkIP.matches()) {
+            throw new EmailValidator.IncorrectInputException("Incorrect input");
+        }
     }
 }
