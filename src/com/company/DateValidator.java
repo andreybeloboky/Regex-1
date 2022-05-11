@@ -16,8 +16,8 @@ public class DateValidator implements Validator {
             System.out.println(checkDate.groupCount());
             System.out.println(checkDate.group());
         }
-//        if (!checkDate.matches()) {
-//            throw new EmailValidator.IncorrectInputException("Incorrect input");
-//        }
+        if (!checkDate.matches()) {
+            throw new IncorrectException("Incorrect input");
+        }
     }
 }

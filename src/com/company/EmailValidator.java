@@ -13,12 +13,7 @@ public class EmailValidator implements Validator {
         Pattern email = Pattern.compile("([A-z0-9_-]+\\.)*[A-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}");
         Matcher checkEmail = email.matcher(str);
         if (!checkEmail.matches()) {
-            throw new IncorrectInputException("Incorrect input");
-        }
-    }
-    public static class IncorrectInputException extends RuntimeException {
-        public IncorrectInputException(String message) {
-            super(message);
+            throw new IncorrectException("Incorrect input");
         }
     }
 }

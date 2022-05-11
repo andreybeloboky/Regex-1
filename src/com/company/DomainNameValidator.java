@@ -13,7 +13,7 @@ public class DomainNameValidator implements Validator {
         Pattern domainName = Pattern.compile("http://\\w+\\.(com|ru|by|ua)/");
         Matcher checkDate = domainName.matcher(str);
         if (!checkDate.matches()) {
-            throw new EmailValidator.IncorrectInputException("Incorrect input");
+            throw new IncorrectException("Incorrect input");
         }
     }
 }
